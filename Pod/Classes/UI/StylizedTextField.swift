@@ -99,7 +99,12 @@ open class StylizedTextField: UITextField, UITextFieldDelegate {
     
     open override func draw(_ rect: CGRect) {
         if text == "" || text == UITextField.emptyTextFieldCharacter {
-            super.drawPlaceholder(in: rect)
+            if let leftView = leftView {
+                let newRect = CGRect(x: rect.origin.x + leftView.bounds.size.width, y: rect.origin.y, width: rect.width - leftView.bounds.size.width, height: rect.height)
+                super.drawPlaceholder(in: newRect)
+            } else {
+                super.drawPlaceholder(in: rect)
+            }
         } else {
             super.draw(rect)
         }
