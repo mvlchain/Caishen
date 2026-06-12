@@ -1,10 +1,6 @@
 ![Caishen](caishen.jpg)
 
-[![Travis build status](https://img.shields.io/travis/prolificinteractive/Caishen.svg?style=flat-square)](https://travis-ci.org/prolificinteractive/Caishen)
-[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/Caishen.svg?style=flat-square)](https://img.shields.io/cocoapods/v/Caishen.svg)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
-[![Platform](https://img.shields.io/cocoapods/p/Caishen.svg?style=flat-square)](http://cocoadocs.org/docsets/Caishen)
-[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/Caishen.svg?style=flat-square)](http://cocoadocs.org/docsets/Caishen)
+[![Swift Package Manager compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg?style=flat-square)](https://swift.org/package-manager/)
 
 ## Description
 
@@ -14,34 +10,32 @@ Caishen provides an easy-to-use text field to ask users for payment card informa
 
 ## Requirements
 
-* iOS 8.0+
-* Xcode 9.0+
+* iOS 15.0+
+* Swift 5.9+ / Xcode 15.0+
 
 ## Installation
 
-### CocoaPods
+### Swift Package Manager
 
-Caishen is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+Caishen is available through [Swift Package Manager](https://swift.org/package-manager/).
 
-```ruby
-pod "Caishen"
-```
-
-### Carthage
-
-Caishen is available through [Carthage](https://github.com/Carthage/Carthage). To install
-it, simply add the following line to your Cartfile:
+In Xcode, go to **File → Add Package Dependencies…** and enter the repository URL:
 
 ```
-github "prolificinteractive/Caishen"
+https://github.com/mvlchain/Caishen.git
 ```
+
+Or add it directly to your `Package.swift` dependencies:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/mvlchain/Caishen.git", from: "2.1.2")
+]
+```
+
+Then add `Caishen` to your target's dependencies.
 
 ## Usage
-
-### Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ---
 
